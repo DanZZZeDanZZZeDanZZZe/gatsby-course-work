@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 
+import HeaderButton from './HeaderButton'
+
 export default function HeaderMenu({ modifier, children }) {
   const [navVisible, setNavVisible] = useState(false)
 
@@ -14,11 +16,7 @@ export default function HeaderMenu({ modifier, children }) {
 
   return (
     <>
-      {showButton && (
-        <button className="button" onClick={onClickHandler}>
-          Копка
-        </button>
-      )}
+      {showButton && <HeaderButton {...{ onClickHandler, openMod: showNav }} />}
       {showNav && children}
     </>
   )

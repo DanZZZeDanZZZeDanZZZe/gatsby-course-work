@@ -67,8 +67,14 @@
     }
 
     & .button {
-      position: relative;
+      background: transparent;
+      padding: 0;
+      border: none;
       z-index: 2;
+
+      & .icon {
+        width: 3rem;
+      }
     }
   }
 
