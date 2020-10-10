@@ -5,7 +5,7 @@ import '../styles/global.css'
 
 export default function HomePage() {
   return (
-    <Layout>
+    <Layout title="Главная">
       <h1>Всем привет</h1>
     </Layout>
   )
