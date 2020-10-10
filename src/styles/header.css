@@ -5,7 +5,6 @@
   background-color: var(--dark-primary-color);
   color: var(--text-and-icons-color);
   box-shadow: var(--shadow-z-depth-1);
-
   --height-lg: 4rem;
   --height-greaterThan-lg: 6rem;
 
