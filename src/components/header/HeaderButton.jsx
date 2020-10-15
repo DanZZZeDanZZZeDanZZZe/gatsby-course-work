@@ -1,7 +1,7 @@
 import React from 'react'
 
-import menuImage from '../../static/menu.svg'
-import menuOpenImage from '../../static/menu_open.svg'
+import menuImage from '../../../static/menu.svg'
+import menuOpenImage from '../../../static/menu_open.svg'
 
 export default function HeaderButton({ onClickHandler, openMod }) {
   return (
