@@ -4,34 +4,24 @@ import React from 'react'
 import '../../styles/header.css'
 import HeaderMenu from './HeaderMenu'
 import Navigation from './Navigation'
+import UseHeaderQuery from './UseHeaderQuery'
 
 export default function Header({ modifier }) {
+  const data = UseHeaderQuery()
+  const {title, pages} = data.file.childDataYaml
+
   return (
     <header className={`header ${modifier}`}>
-      <h1 className="title">Южная Корея</h1>
+      <h1 className="title">{title}</h1>
       <HeaderMenu {...{ modifier }}>
         <Navigation>
-          <Link to="/" className="link" activeClassName="active">
-            Главная
-          </Link>
-          <Link to="/1" className="link" activeClassName="active">
-            История
-          </Link>
-          <Link to="/2" className="link" activeClassName="active">
-            Культура
-          </Link>
-          <Link to="/3" className="link" activeClassName="active">
-            Плоитика
-          </Link>
-          <Link to="/4" className="link" activeClassName="active">
-            Экономика
-          </Link>
-          <Link to="/5" className="link" activeClassName="active">
-            Викторина
-          </Link>
-          <Link to="/5" className="link" activeClassName="active">
-            Об авторе
-          </Link>
+          {pages.map(({title, file}) => {
+            return (
+              <Link to={`/${file}`} className="link" activeClassName="active">
+                {title}
+              </Link>
+            )
+          })}
         </Navigation>
       </HeaderMenu>
     </header>
