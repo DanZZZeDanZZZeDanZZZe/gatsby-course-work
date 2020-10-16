@@ -1,3 +1,5 @@
+@import 'mixins.css';
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -63,6 +65,47 @@
           transform: translateX(-0.8rem);
         }
       }
+
+      @mixin nav-animation;
+      /* &.animation-enter {
+        opacity: 0;
+        transform: translateX(100%);
+
+        &:before {
+          opacity: 0;
+        }
+      }
+
+      &.animation-enter-active {
+        opacity: 1;
+        transform: translateX(0%);
+        transition: all 0.2s;
+      }
+
+      &.animation-enter-done {
+        &:before {
+          opacity: 1;
+          transition: all 0.3s;
+        }
+      }
+
+      &.animation-exit {
+        opacity: 1;
+        transform: translateX(0%);
+
+        &:before {
+          opacity: 1;
+        }
+      }
+
+      &.animation-exit-active {
+        opacity: 0;
+        transition: opacity 0.2ms;
+
+        &:before {
+          opacity: 0;
+        }
+      } */
     }
 
     & .button {

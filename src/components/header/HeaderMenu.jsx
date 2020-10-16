@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import { CSSTransition } from 'react-transition-group';
 
 import HeaderButton from './HeaderButton'
 
@@ -17,7 +18,14 @@ export default function HeaderMenu({ modifier, children }) {
   return (
     <>
       {showButton && <HeaderButton {...{ onClickHandler, openMod: showNav }} />}
-      {showNav && children}
+      {<CSSTransition
+        in={showNav}
+        classNames="animation"
+        timeout={300}
+        unmountOnExit
+      >
+        {children}
+      </CSSTransition>}
     </>
   )
 }

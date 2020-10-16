@@ -1,5 +1,3 @@
-@import 'extends.css';
-
 .footer {
   display: flex;
   background-color: var(--dark-primary-color);

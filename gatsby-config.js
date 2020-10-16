@@ -20,10 +20,11 @@ module.exports = {
       resolve: `gatsby-plugin-postcss`,
       options: {
         postCssPlugins: [
-          require('postcss-extend')(),
+          require('postcss-import')(),
+          require('postcss-mixins')(),
           require(`postcss-nesting`)(),
           require(`postcss-preset-env`)({
-            stage: 0,
+            stage: 2,
           }),
           require('cssnano')(),
         ],
