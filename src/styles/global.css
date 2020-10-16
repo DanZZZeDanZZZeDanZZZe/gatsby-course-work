@@ -15,11 +15,11 @@ body {
 /* Colors and shadows*/
 
 :root {
-  --dark-primary-color: #5d4037;
-  --light-primary-color: #d7ccc8;
-  --primary-color: #795548;
+  --dark-primary-color: #7c5e8c;
+  --light-primary-color: #ffe9df;
+  --primary-color: #fb9795;
   --text-and-icons-color: #ffffff;
-  --accent-color: #cddc39;
+  --accent-color: #b0e7ea;
   --primary-text-color: #212121;
   --secondary-text-color: #757575;
   --divider-color: #bdbdbd;
