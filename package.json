@@ -34,7 +34,8 @@
     "postcss-mixins": "^6.2.3",
     "postcss-nested": "^5.0.1",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "2.1.1"
+    "prettier": "2.1.1",
+    "stylelint-config-recommended": "^3.0.0"
   },
   "repository": {
     "type": "git",
