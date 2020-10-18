@@ -27,10 +27,10 @@
     }
 
     & .nav {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
-      bottom: 0;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -67,45 +67,6 @@
       }
 
       @mixin nav-animation;
-      /* &.animation-enter {
-        opacity: 0;
-        transform: translateX(100%);
-
-        &:before {
-          opacity: 0;
-        }
-      }
-
-      &.animation-enter-active {
-        opacity: 1;
-        transform: translateX(0%);
-        transition: all 0.2s;
-      }
-
-      &.animation-enter-done {
-        &:before {
-          opacity: 1;
-          transition: all 0.3s;
-        }
-      }
-
-      &.animation-exit {
-        opacity: 1;
-        transform: translateX(0%);
-
-        &:before {
-          opacity: 1;
-        }
-      }
-
-      &.animation-exit-active {
-        opacity: 0;
-        transition: opacity 0.2ms;
-
-        &:before {
-          opacity: 0;
-        }
-      } */
     }
 
     & .button {

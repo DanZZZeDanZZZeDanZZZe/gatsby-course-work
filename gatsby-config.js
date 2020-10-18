@@ -4,18 +4,31 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `data`,
-        path: `${__dirname}/src/data/`,
-        ignore: [`**/\.*`],
+        name: `src`,
+        path: `${__dirname}/src/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `pages`,
-        path: `${__dirname}/src/pages/`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `data-pages`,
+    //     path: `${__dirname}/src/data/pages/`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `data`,
+    //     path: `${__dirname}/src/data/`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `pages`,
+    //     path: `${__dirname}/src/pages/`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-postcss`,
       options: {

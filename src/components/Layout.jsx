@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import "normalize.css"
 
+import '../styles/global.css'
 import Header from './header/Header'
 import Main from './Main'
 import MediaOptions from './MediaOptions'
@@ -12,6 +13,12 @@ import Footer from './Footer'
 export default function Layout({ children, title }) {
   const headerBreakpoints = [
     ['lessThan', 'lg'],
+    ['greaterThanOrEqual', 'lg'],
+  ]
+
+  const mainBreakpoints = [
+    ['lessThan', 'md'],
+    ['at', 'md'],
     ['greaterThanOrEqual', 'lg'],
   ]
 
@@ -28,9 +35,11 @@ export default function Layout({ children, title }) {
           <MediaOptions breakpoints={headerBreakpoints}>
             <Header />
           </MediaOptions>
-          <Main>
-            {children}
-          </Main>
+          <MediaOptions breakpoints={mainBreakpoints}>
+            <Main>
+              {children}
+            </Main>
+          </MediaOptions>
           <MediaOptions breakpoints={footerBreakpoints}>
             <Footer />
           </MediaOptions>

@@ -1,0 +1,44 @@
+@import '../mixins.css';
+
+.main {
+  & .slider-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50rem;
+    background: var(--light-primary-color);
+  }
+  & .top-article,
+  & .bottom-article {
+    box-sizing: border-box;
+    @mixin article-block;
+    margin: 5rem auto;
+    background: var(--primary-color);
+    color: white;
+  }
+
+  &.lessThan-md {
+    & .top-article,
+    & .bottom-article {
+      width: 100%;
+      padding: 4rem 1rem;
+      border-radius: 0;
+    }
+  }
+
+  &.at-md {
+    & .top-article,
+    & .bottom-article {
+      width: 60%;
+      padding: 5rem 3rem;
+    }
+  }
+
+  &.greaterThanOrEqual-lg {
+    & .top-article,
+    & .bottom-article {
+      width: 40%;
+      padding: 7rem 5rem;
+    }
+  }
+}
