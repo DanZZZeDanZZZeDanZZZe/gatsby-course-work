@@ -12,9 +12,12 @@ body {
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
 }
 
-/* Colors and shadows*/
+/* Colors and shadows and sizes*/
 
 :root {
+  --header-height-lg: 4rem;
+  --header-height-greaterThan-lg: 6rem;
+
   --dark-primary-color: #7c5e8c;
   --light-primary-color: #ffe9df;
   --primary-color: #fb9795;

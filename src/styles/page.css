@@ -7,10 +7,14 @@
     position: fixed;
     left: 0;
     right: 0;
+    z-index: 2;
   }
 
   & .main {
-    margin-top: var(--header-height);
-    flex-grow: 1;
+    margin-top: var(--header-height-lg);
+    &.greaterThanOrEqual-lg {
+      margin-top: var(--header-height-greaterThan-lg);
+    }
+    /* flex-grow: 1; */
   }
 }

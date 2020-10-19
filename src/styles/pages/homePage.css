@@ -2,12 +2,40 @@
 
 .main {
   & .slider-holder {
-    display: flex;
-    align-items: center;
+    display: grid;
+    //grid-template-columns: repeat(3, 20rem);
+    /* align-items: center; */
     justify-content: center;
     height: 50rem;
     background: var(--light-primary-color);
+
+    & .button-back,
+    & .button-forward {
+      width: 10rem;
+      height: 10rem;
+      @mixin clear-button;
+      transition: all 0.2s;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: translateY(0.5rem);
+      }
+    }
+
+    & .button-forward {
+      @mixin bg-image-center '../../../static/arrow-forward.svg';
+    }
+
+    & .button-back {
+      @mixin bg-image-center '../../../static/arrow-back.svg';
+    }
+
+    & .slider {
+    }
   }
+
   & .top-article,
   & .bottom-article {
     box-sizing: border-box;

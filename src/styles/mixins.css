@@ -7,6 +7,22 @@
   box-shadow: var(--shadow-z-depth-1);
 }
 
+@define-mixin clear-button {
+  background: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@define-mixin bg-image-center $url {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
 @define-mixin nav-animation {
   &.animation-enter {
     opacity: 0;
