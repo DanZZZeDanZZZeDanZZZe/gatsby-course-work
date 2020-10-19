@@ -6,7 +6,7 @@ import '../styles/global.css'
 import Header from './header/Header'
 import Main from './Main'
 import MediaOptions from './MediaOptions'
-import { MediaContextProvider } from './Media'
+// import { MediaContextProvider } from './Media'
 import Page from './Page'
 import Footer from './Footer'
 
@@ -30,7 +30,7 @@ export default function Layout({ children, title }) {
   return (
     <>
       <Helmet title={title} defer={false}/>
-      <MediaContextProvider>
+      {/* <MediaContextProvider> */}
         <Page>
           <MediaOptions breakpoints={headerBreakpoints}>
             <Header />
@@ -45,7 +45,7 @@ export default function Layout({ children, title }) {
           </MediaOptions>
         </Page>
         
-      </MediaContextProvider>
+      {/* </MediaContextProvider> */}
     </>
   )
 }

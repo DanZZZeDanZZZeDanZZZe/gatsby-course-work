@@ -1,5 +1,5 @@
 import React from 'react'
-import { Media } from './Media'
+import { Media } from '../Media'
 
 export default function MediaOptions({ children, breakpoints }) {
   return (
