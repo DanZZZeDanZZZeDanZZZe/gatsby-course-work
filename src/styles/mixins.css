@@ -1,0 +1,67 @@
+@define-mixin article-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-z-depth-1);
+}
+
+@define-mixin clear-button {
+  background: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@define-mixin bg-image-center $url {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+}
+
+@define-mixin nav-animation {
+  &.animation-enter {
+    opacity: 0;
+    transform: translateY(-30%);
+
+    &:before {
+      opacity: 0;
+    }
+  }
+
+  &.animation-enter-active {
+    opacity: 1;
+    transform: translateY(0%);
+    transition: all 0.3s;
+  }
+
+  &.animation-enter-done {
+    &:before {
+      opacity: 1;
+      transition: all 0.3s;
+    }
+  }
+
+  &.animation-exit {
+    opacity: 1;
+    transform: translateY(0%);
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &.animation-exit-active {
+    opacity: 0;
+    transform: translateY(-30%);
+    transition: all 0.3s;
+
+    &:before {
+      opacity: 0;
+    }
+  }
+}

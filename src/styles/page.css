@@ -1,0 +1,19 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  & .header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  & .main {
+    margin-top: var(--header-height-lg);
+    &.greaterThanOrEqual-lg {
+      margin-top: var(--header-height-greaterThan-lg);
+    }
+  }
+}

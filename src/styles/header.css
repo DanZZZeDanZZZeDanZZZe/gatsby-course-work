@@ -1,3 +1,5 @@
+@import 'mixins.css';
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -5,9 +7,6 @@
   background-color: var(--dark-primary-color);
   color: var(--text-and-icons-color);
   box-shadow: var(--shadow-z-depth-1);
-
-  --height-lg: 4rem;
-  --height-greaterThan-lg: 6rem;
 
   & .link {
     display: flex;
@@ -18,7 +17,7 @@
   }
 
   &.lessThan-lg {
-    height: var(--height-lg);
+    height: var(--header-height-lg);
     padding: 0 1rem;
 
     & .title {
@@ -26,16 +25,16 @@
     }
 
     & .nav {
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
-      bottom: 0;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       width: 70%;
-      height: calc(100% - var(--height-lg));
-      padding-top: var(--height-lg);
+      height: calc(100% - var(--header-height-lg));
+      padding-top: var(--header-height-lg);
       background-color: var(--dark-primary-color);
 
       &:before {
@@ -56,14 +55,24 @@
         font-size: 2rem;
         color: white;
 
+        &.active,
         &:hover {
           cursor: pointer;
-          background: var(--accent-color);
           color: black;
           box-shadow: var(--shadow-z-depth-1);
           transform: translateX(-0.8rem);
         }
+
+        &.active {
+          background: var(--accent-color);
+        }
+
+        &:hover {
+          background: var(--primary-color);
+        }
       }
+
+      @mixin nav-animation;
     }
 
     & .button {
@@ -72,6 +81,10 @@
       border: none;
       z-index: 2;
 
+      &:hover {
+        cursor: pointer;
+      }
+
       & .icon {
         width: 3rem;
       }
@@ -79,7 +92,7 @@
   }
 
   &.greaterThanOrEqual-lg {
-    height: var(--height-greaterThan-lg);
+    height: var(--header-height-greaterThan-lg);
     padding: 0 4rem;
 
     & .title {
