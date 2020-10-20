@@ -1,25 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function Slider({ images }) {
+export default function Slider({ imagesSrc }) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
   const backOnClick = () => {
-    console.log('b-click')
+    if (currentIndex === 0) {
+      setCurrentIndex(imagesSrc.length - 1)
+    } else {
+      setCurrentIndex(currentIndex - 1)
+    }
   }
 
   const forwardOnClick = () => {
-    console.log('f-click')
+    if (currentIndex === imagesSrc.length - 1) {
+      setCurrentIndex(0)
+    } else {
+      setCurrentIndex(currentIndex + 1)
+    }
   }
+
   return (
     <>
       <button 
         className="button-back" 
         type="button" 
-        onClick={()=> backOnClick()}
+        onClick={backOnClick}
       >
       </button>
-      <div className="slider">
-        <img src=""/>
-      </div>
-      <button className="button-forward" type="button">
+        <img className="slider" src={imagesSrc[currentIndex]}/>
+      <button 
+        className="button-forward" 
+        type="button"
+        onClick={forwardOnClick}
+      >
       </button>
     </>
   )

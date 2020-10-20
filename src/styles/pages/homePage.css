@@ -3,8 +3,7 @@
 .main {
   & .slider-holder {
     display: grid;
-    //grid-template-columns: repeat(3, 20rem);
-    /* align-items: center; */
+    align-items: center;
     justify-content: center;
     height: 50rem;
     background: var(--light-primary-color);
@@ -13,6 +12,7 @@
     & .button-forward {
       width: 10rem;
       height: 10rem;
+      justify-self: center;
       @mixin clear-button;
       transition: all 0.2s;
       &:hover {
@@ -33,6 +33,10 @@
     }
 
     & .slider {
+      @mixin article-block;
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
     }
   }
 
@@ -46,15 +50,26 @@
   }
 
   &.lessThan-md {
+    & .slider-holder {
+      grid-template-rows: 70% 30%;
+      grid-template-columns: 45% 45%;
+    }
     & .top-article,
     & .bottom-article {
       width: 100%;
       padding: 4rem 1rem;
       border-radius: 0;
     }
+    & .slider {
+      grid-column: 1 / 3;
+      grid-row: 1;
+    }
   }
 
   &.at-md {
+    & .slider-holder {
+      grid-template-columns: 10% 60% 10%;
+    }
     & .top-article,
     & .bottom-article {
       width: 60%;
@@ -63,6 +78,9 @@
   }
 
   &.greaterThanOrEqual-lg {
+    & .slider-holder {
+      grid-template-columns: 10% 40% 10%;
+    }
     & .top-article,
     & .bottom-article {
       width: 40%;

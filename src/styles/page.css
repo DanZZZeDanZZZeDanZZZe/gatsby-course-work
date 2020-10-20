@@ -15,6 +15,5 @@
     &.greaterThanOrEqual-lg {
       margin-top: var(--header-height-greaterThan-lg);
     }
-    /* flex-grow: 1; */
   }
 }

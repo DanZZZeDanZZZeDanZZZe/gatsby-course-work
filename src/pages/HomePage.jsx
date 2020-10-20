@@ -11,11 +11,13 @@ export default function HomePage({data}) {
     bottomArticleText,
     imagesForSlider
   } = data.file.childDataYaml
-  console.log('HomePage -> imagesForSlider', imagesForSlider)
+
+  const imagesSrc = imagesForSlider.map(i => `./${i.image}`)
+
   return (
     <Layout title="Главная">
       <div className="slider-holder">
-      <Slider/>
+        <Slider {...{imagesSrc}} />
       </div>
       <article className="top-article">
         {topArticleText}
@@ -34,7 +36,9 @@ export const query = graphql`
       childDataYaml {
         topArticleText
         bottomArticleText
-        imagesForSlider
+        imagesForSlider {
+          image
+        }
       }
     }
   }

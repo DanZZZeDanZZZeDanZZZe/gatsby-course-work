@@ -13,5 +13,5 @@ bottomArticleText: 'На сайте представлена справочна�
 
 #Cписок картинок для слайдера из папки static
 imagesForSlider:
-  -'slider1.webp'
-  -'slider2.jpg'
+  - image: 'slider1.webp'
+  - image: 'slider2.jpg'
