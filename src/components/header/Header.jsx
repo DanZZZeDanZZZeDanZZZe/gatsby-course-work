@@ -15,9 +15,14 @@ export default function Header({ modifier }) {
       <h1 className="title">{title}</h1>
       <HeaderMenu {...{ modifier }}>
         <Navigation>
-          {pages.map(({title, file}) => {
+          {pages.map(({title, file}, index) => {
             return (
-              <Link to={`/${file}`} className="link" activeClassName="active">
+              <Link 
+                to={`/${file}`} 
+                className="link" 
+                activeClassName="active"
+                key={`${index}${file}`}
+              >
                 {title}
               </Link>
             )
