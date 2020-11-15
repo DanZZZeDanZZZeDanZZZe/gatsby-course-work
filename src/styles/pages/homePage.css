@@ -1,6 +1,6 @@
 @import '../mixins.css';
 
-.main {
+.main-home {
   & .slider-holder {
     display: grid;
     align-items: center;

@@ -15,7 +15,7 @@ export default function HomePage({data}) {
   const imagesSrc = imagesForSlider.map(i => `./${i.image}`)
 
   return (
-    <Layout title="Главная">
+    <Layout title="Главная" pageName="home">
       <div className="slider-holder">
         <Slider {...{imagesSrc}} />
       </div>
