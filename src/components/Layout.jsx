@@ -10,7 +10,7 @@ import MediaOptions from './MediaOptions'
 import Page from './Page'
 import Footer from './Footer'
 
-export default function Layout({ children, title }) {
+export default function Layout({ children, title, pageName}) {
   const headerBreakpoints = [
     ['lessThan', 'lg'],
     ['greaterThanOrEqual', 'lg'],
@@ -36,7 +36,7 @@ export default function Layout({ children, title }) {
             <Header />
           </MediaOptions>
           <MediaOptions breakpoints={mainBreakpoints}>
-            <Main>
+            <Main pageName={pageName}>
               {children}
             </Main>
           </MediaOptions>
