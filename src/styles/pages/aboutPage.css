@@ -1,0 +1,49 @@
+.main-about {
+  background-color: var(--light-primary-color);
+  color: var(--text-and-icons-color-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-size: 2rem;
+
+  & .about-text {
+    text-align: center;
+    margin-top: 10rem;
+  }
+
+  & .about-topic-title {
+    margin-top: 1rem;
+  }
+
+  & .about-topic-title {
+    margin-top: 1rem;
+    margin-bottom: 15rem;
+  }
+
+  & .about-learner,
+  & .about-teacher {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &.lessThan-md {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &.at-md {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  &.greaterThanOrEqual-lg {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  &.at-md,
+  &.greaterThanOrEqual-lg {
+  }
+}

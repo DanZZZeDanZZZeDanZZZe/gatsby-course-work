@@ -19,7 +19,7 @@
   & .text-block-1,
   & .text-block-3 {
     background: var(--light-primary-color);
-    color: rgb(77, 77, 77);
+    color: var(--text-and-icons-color-2);
   }
 
   & .text-block-2 {
