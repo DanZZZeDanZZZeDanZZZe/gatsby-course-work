@@ -13,7 +13,7 @@ pages:
   - title: 'История'
     file: 'HistoryPage'
   - title: 'Культура'
-    file: '#'
+    file: 'CulturePage'
   - title: 'Политика'
     file: '#'
   - title: 'Экономика'
