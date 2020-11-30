@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import '../styles/pages/culturePage.css'
 
 import Layout from '../components/Layout'
+import Section from '../components/header/Section'
 
 export default function CulturePage({data}) {
 const {
@@ -20,21 +21,11 @@ const {
 
   return (
     <Layout title={pageTitle} pageName="culture">
-      <section className="section section-1">
-        <h3 className="title title-1">{title1}</h3>
-        <p className="text text-1">{text1}</p>
-      </section>
+      <Section index="1" text={text1} title={title1}/>
       <img className="image image-1" src={`./${image1}`} alt="image-1"/>
-
-      <section className="section section-2">
-        <h3 className="title title-2">{title2}</h3>
-        <p className="text text-2">{text2}</p>
-      </section>
+      <Section index="2" text={text2} title={title2}/>
       <img className="image image-2" src={`./${image2}`} alt="image-2"/>
-      <section className="section section-3">
-        <h3 className="title title-3">{title3}</h3>
-        <p className="text text-3">{text3}</p>
-      </section>
+      <Section index="3" text={text3} title={title3}/>
       <img className="image image-3" src={`./${image3}`} alt="image-3"/>
     </Layout>
   )

@@ -15,7 +15,7 @@ pages:
   - title: 'Культура'
     file: 'CulturePage'
   - title: 'Политика'
-    file: '#'
+    file: 'PolicyPage'
   - title: 'Экономика'
     file: '#'
   - title: 'Викторина'
