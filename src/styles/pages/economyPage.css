@@ -1,0 +1,63 @@
+@import '../mixins.css';
+
+.main-economy {
+  background-color: var(--light-primary-color);
+  color: var(--text-and-icons-color-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  & .section {
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    color: var(--text-and-icons-color);
+  }
+
+  & .section:nth-child(2n) {
+    background-color: var(--dark-primary-color);
+  }
+
+  & .title {
+    width: 20rem;
+    @mixin round-title;
+    color: var(--text-and-icons-color-2);
+  }
+
+  &.lessThan-md {
+    font-size: 1.5rem;
+  }
+
+  &.at-md {
+    font-size: 1.7rem;
+  }
+
+  &.greaterThanOrEqual-lg {
+    font-size: 2rem;
+    padding: 4rem;
+
+    & .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+
+  &.lessThan-md,
+  &.at-md {
+    & .section {
+      padding: 0 2rem;
+    }
+  }
+
+  &.at-md,
+  &.greaterThanOrEqual-lg {
+    & .section {
+      margin-bottom: 2rem;
+      border-radius: 1rem;
+    }
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+}

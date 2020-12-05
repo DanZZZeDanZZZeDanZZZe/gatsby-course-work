@@ -19,7 +19,7 @@ pages:
   - title: 'География'
     file: 'GeographyPage'
   - title: 'Экономика'
-    file: '#'
+    file: 'EconomyPage'
   - title: 'Викторина'
     file: '#'
   - title: 'Об авторе'
