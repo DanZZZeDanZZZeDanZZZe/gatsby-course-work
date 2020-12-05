@@ -65,3 +65,10 @@
     }
   }
 }
+
+@define-mixin round-title {
+  text-align: center;
+  padding: 0.5rem 0;
+  background-color: var(--accent-color);
+  border-radius: 1.5rem;
+}

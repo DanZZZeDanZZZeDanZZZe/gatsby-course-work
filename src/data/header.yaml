@@ -16,6 +16,8 @@ pages:
     file: 'CulturePage'
   - title: 'Политика'
     file: 'PolicyPage'
+  - title: 'География'
+    file: 'GeographyPage'
   - title: 'Экономика'
     file: '#'
   - title: 'Викторина'

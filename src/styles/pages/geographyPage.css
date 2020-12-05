@@ -1,0 +1,70 @@
+@import '../mixins.css';
+
+.main-geography {
+  background-color: var(--light-primary-color);
+  color: var(--text-and-icons-color-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  & .title {
+    width: 20rem;
+    @mixin round-title;
+  }
+
+  & .gallery {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  & .image {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  &.lessThan-md {
+    font-size: 1.5rem;
+  }
+
+  &.at-md {
+    font-size: 1.7rem;
+
+    & .image {
+      border-radius: 1rem;
+    }
+  }
+
+  &.greaterThanOrEqual-lg {
+    font-size: 2rem;
+    padding: 4rem;
+
+    & .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      & .image {
+        height: 40rem;
+      }
+    }
+  }
+
+  &.lessThan-md,
+  &.at-md {
+    & .section {
+      padding: 0 2rem;
+    }
+
+    & .image {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &.at-md,
+  &.greaterThanOrEqual-lg {
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+}
