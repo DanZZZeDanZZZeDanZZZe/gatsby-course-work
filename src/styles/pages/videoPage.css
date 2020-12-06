@@ -1,0 +1,40 @@
+.main-video {
+  background-color: var(--light-primary-color);
+  color: var(--text-and-icons-color-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  & .video {
+    background-color: var(--dark-primary-color);
+    margin-bottom: 4rem;
+  }
+
+  &.lessThan-md {
+    font-size: 1.5rem;
+
+    & .video {
+      height: 20rem;
+      width: 100%;
+    }
+  }
+
+  &.at-md {
+    font-size: 1.7rem;
+
+    & .video {
+      height: 30rem;
+      width: 70%;
+    }
+  }
+
+  &.greaterThanOrEqual-lg {
+    font-size: 2rem;
+
+    & .video {
+      height: 40rem;
+      width: 40%;
+    }
+  }
+}

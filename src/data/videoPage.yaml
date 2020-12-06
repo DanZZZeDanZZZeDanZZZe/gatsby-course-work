@@ -1,0 +1,11 @@
+#Данные для страницы с видео
+pageTitle: 'Видео'
+
+#Заголовок сраницы
+title: 'Подборка видео о Корее'
+
+#Ссылки на видео
+videos:
+  - https://www.youtube.com/embed/BpzblZceMDg
+  - https://www.youtube.com/embed/oP22IH80ET8
+  - https://www.youtube.com/embed/qruAeQYfWp8

@@ -24,3 +24,5 @@ pages:
     file: '#'
   - title: 'Об авторе'
     file: 'AboutPage'
+  - title: 'Видео'
+    file: 'VideoPage'
