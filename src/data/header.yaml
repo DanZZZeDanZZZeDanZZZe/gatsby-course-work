@@ -26,3 +26,5 @@ pages:
     file: 'AboutPage'
   - title: 'Видео'
     file: 'VideoPage'
+  - title: 'Материалы'
+    file: 'MaterialsPage'

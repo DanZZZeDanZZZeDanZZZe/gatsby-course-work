@@ -11,7 +11,7 @@ export default function VideoPage({data}) {
     videos
     
   } = data.file.childDataYaml
-  console.log("🚀 ~ file: VideoPage.jsx ~ line 11 ~ VideoPage ~ videos", videos)
+
   return (
     <Layout title={pageTitle} pageName="video">
       <h2>{title}</h2>
