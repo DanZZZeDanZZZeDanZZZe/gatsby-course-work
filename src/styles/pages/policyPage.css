@@ -7,7 +7,7 @@
   align-items: center;
 
   & .title {
-    width: 20rem;
+    width: 30rem;
     text-align: center;
     padding: 0.5rem 0;
     background-color: var(--accent-color);
@@ -27,7 +27,7 @@
     }
   }
   &.at-md {
-    font-size: 1.7rem;
+    font-size: 2rem;
 
     & .image {
       width: 60%;
@@ -40,10 +40,9 @@
     display: grid;
     grid-gap: 2rem;
     grid-template-areas:
-      'section-1 image-1'
-      'section-2 image-1'
-      'section-2 image-2'
-      'section-3 image-2';
+      'section-1 image-1 image-1'
+      'section-2 section-2 section-2'
+      'section-3 image-2 image-2';
     & .section {
       box-sizing: border-box;
       background-color: var(--primary-color);
@@ -56,6 +55,7 @@
     }
 
     & .image {
+      min-width: 100%;
       width: 100%;
     }
 
